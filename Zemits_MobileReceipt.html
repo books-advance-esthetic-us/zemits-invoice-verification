@@ -2,99 +2,92 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Mobile Receipt - PAID & VERIFIED</title>
+<title>Mobile Receipt – INV-079486</title>
 
 <style>
-body { 
-    font-family: Arial; 
-    background:#fff; 
-    padding:15px; 
+body {
+    font-family: Arial, sans-serif;
+    background:#ffffff;
+    margin:0;
+    padding:15px;
 }
-.box { 
-    border:1px solid #ddd; 
-    border-radius:8px; 
-    padding:15px; 
+
+.box {
+    border:1px solid #e5e5e5;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
-.title { 
-    text-align:center; 
-    font-size:18px; 
-    font-weight:bold; 
-}
-.paid { 
-    text-align:center; 
-    color:green; 
-    font-size:14px; 
-    margin-bottom:10px; 
-}
-.row { 
-    margin:8px 0; 
-    font-size:14px; 
-}
-.total { 
-    font-weight:bold; 
-    font-size:16px; 
-    margin-top:15px; 
-    text-align:right; 
-}
-.center {
+
+.title {
     text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    color:#222;
 }
-.small {
-    font-size:12px;
-    color:#777;
+
+.paid {
+    text-align:center;
+    color:#28a745;
+    font-size:14px;
+    font-weight:bold;
+    margin-top:5px;
+}
+
+.row {
+    margin:10px 0;
+    font-size:14px;
+}
+
+.total {
+    font-weight:bold;
+    font-size:16px;
+    margin-top:15px;
+    text-align:right;
+}
+
+.qr {
+    text-align:center;
+    margin-top:20px;
+}
+.qr img {
+    width:150px;
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="box">
 
-<div class="title">Advance-Esthetic</div>
-<div class="paid">PAID • VERIFIED</div>
+    <div class="title">Advance-Esthetic</div>
+    <div class="paid">PAID RECEIPT</div>
 
-<div class="row"><b>Invoice:</b> INV-079486</div>
-<div class="row"><b>Date:</b> 10/13/2025</div>
-<div class="row"><b>Paid:</b> 10/13/2025</div>
-<div class="row"><b>Method:</b> VISA •••• 3021</div>
+    <!-- Invoice Details -->
+    <div class="row"><b>Invoice:</b> INV-079486</div>
+    <div class="row"><b>Date:</b> 10/13/2025</div>
+    <div class="row"><b>Paid:</b> 10/13/2025</div>
+    <div class="row"><b>Method:</b> VISA DEBIT •••• 3021</div>
 
-<div class="row"><b>Client:</b> Rossi Saloon Inc</div>
-<div class="row"><b>Phone:</b> +1 (718) 300-5196</div>
+    <!-- Customer -->
+    <div class="row"><b>Client:</b> Rossi Saloon Inc</div>
+    <div class="row"><b>Phone:</b> +1 (718) 300-5196</div>
 
-<div class="row"><b>Zemits DermeLuxx Pro:</b> $4,190.00</div>
-<div class="row"><b>Zemits Abigon Pro System:</b> $3,790.00</div>
+    <!-- Items -->
+    <div class="row"><b>Zemits DermeLuxx Pro:</b> $4,190.00</div>
+    <div class="row"><b>Zemits Abigon Pro System:</b> $3,790.00</div>
 
-<div class="row"><b>Subtotal:</b> $7,980.00</div>
-<div class="row"><b>Tax (NY 8.875%):</b> $708.23</div>
+    <div class="row"><b>Subtotal:</b> $7,980.00</div>
+    <div class="row"><b>Tax (NY 8.875%):</b> $708.23</div>
 
-<div class="total">$8,688.23 Paid</div>
+    <!-- Total -->
+    <div class="total">$8,688.23 PAID</div>
 
-<div class="center" style="margin-top:20px;">
-    <b>Verification ID:</b><br>
-    a94f3d7c-019d-4f91-b0bf-d9127aa28c72
-</div>
-
-<div class="center" style="margin-top:10px;">
-    <b>Official Verification URL:</b><br>
-    <a href="https://books-advance-esthetic-us.github.io/zemits-invoice-verification/" 
-       target="_blank">
-       books-advance-esthetic-us.github.io/zemits-invoice-verification/
-    </a>
-</div>
-
-<div class="center" style="margin-top:20px;">
-    <b>QR Code (Verification)</b><br>
-    <img src="Invoice_Verification_Invoice_Verification_QR_NEW.png" width="150">
-</div>
-
-<div class="center" style="margin-top:20px;">
-    <b>Invoice Barcode</b><br>
-    <img src="https://api.qrserver.com/v1/barcode/?data=INV-079486&type=code128" width="200">
-</div>
-
-<div class="small center" style="margin-top:20px;">
-    Scan QR or visit URL to verify authenticity
-</div>
+    <!-- QR Code -->
+    <div class="qr">
+        <p><b>Verify Invoice:</b></p>
+        <img src="Invoice_Verification_QR_NEW.png" alt="Verification QR Code">
+    </div>
 
 </div>
 
