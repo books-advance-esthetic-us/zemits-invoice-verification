@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Invoice Lookup – Advance-Esthetic</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+    text-align:center;
+}
+.container {
+    max-width:400px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.1);
+}
+input {
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+button {
+    width:100%;
+    padding:14px;
+    margin-top:12px;
+    background:#3070ff;
+    color:white;
+    border:none;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+button:hover { background:#1d5bf3; }
+.example {
+    margin-top:10px;
+    font-size:13px;
+    color:#777;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Verify Your Invoice</h2>
+    <p>Enter your invoice number exactly as shown on your receipt.</p>
+
+    <div class="example">(Example format: <b>INV-000000</b>)</div>
+
+    <input id="inv" placeholder="Enter Invoice Number">
+    <button onclick="go()">Verify Invoice</button>
+</div>
+
+<script>
+function go() {
+    let inv = document.getElementById('inv').value.trim().toUpperCase();
+
+    if (!inv.startsWith("INV-")) {
+        alert("Invalid invoice format. Use format: INV-000000");
+        return;
+    }
+
+    // Check if JSON exists
+    fetch(`data/${inv}.json`)
+        .then(r => {
+            if (r.ok) {
+                window.location.href = `invoice_${inv}.html`;
+            } else {
+                window.location.href = "not_found.html";
+            }
+        });
+}
+</script>
+
+</body>
+</html>
