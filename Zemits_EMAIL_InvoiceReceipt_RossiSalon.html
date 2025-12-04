@@ -1,29 +1,79 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Invoice Receipt - Rossi Saloon Inc</title>
+
 <style>
-body { font-family: Arial, sans-serif; background:#f5f5f5; padding:20px; }
-.container { max-width:600px; margin:auto; background:#fff; padding:25px; border-radius:8px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-.header { text-align:center; font-size:20px; font-weight:bold; }
-.sub { text-align:center; color:#4CAF50; font-size:16px; margin-top:5px; }
-.details { margin-top:25px; font-size:14px; }
-.details div { margin-bottom:8px; }
-.table { width:100%; border-collapse:collapse; margin-top:20px; }
-.table th, .table td { padding:10px; border-bottom:1px solid #ddd; }
-.table th { background:#f2f2f2; text-align:left; }
-.total { font-weight:bold; font-size:16px; text-align:right; padding-top:15px;}
-.qr { text-align:center; margin-top:25px; }
-.footer { font-size:12px; color:#777; margin-top:25px; text-align:center; }
+body { 
+    font-family: Arial, sans-serif; 
+    background:#f5f5f5; 
+    padding:20px; 
+}
+.container { 
+    max-width:600px; 
+    margin:auto; 
+    background:#fff; 
+    padding:25px; 
+    border-radius:8px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+.header { 
+    text-align:center; 
+    font-size:20px; 
+    font-weight:bold; 
+}
+.sub { 
+    text-align:center; 
+    color:#4CAF50; 
+    font-size:16px; 
+    margin-top:5px; 
+}
+.details { 
+    margin-top:25px; 
+    font-size:14px; 
+}
+.details div { 
+    margin-bottom:8px; 
+}
+.table { 
+    width:100%; 
+    border-collapse:collapse; 
+    margin-top:20px; 
+}
+.table th, .table td { 
+    padding:10px; 
+    border-bottom:1px solid #ddd; 
+}
+.table th { 
+    background:#f2f2f2; 
+    text-align:left; 
+}
+.total { 
+    font-weight:bold; 
+    font-size:16px; 
+    text-align:right; 
+    padding-top:15px;
+}
+.qr { 
+    text-align:center; 
+    margin-top:25px; 
+}
+.footer { 
+    font-size:12px; 
+    color:#777; 
+    margin-top:25px; 
+    text-align:center; 
+}
 </style>
+
 </head>
 <body>
+
 <div class="container">
+
     <div class="header">Advance-Esthetic</div>
-    <div class="sub">Payment Receipt – PAID</div>
+    <div class="sub">Payment Receipt – PAID & VERIFIED</div>
 
     <div class="details">
         <div><strong>Invoice Number:</strong> INV-079486</div>
@@ -32,7 +82,7 @@ box-shadow:0 2px 10px rgba(0,0,0,0.1);}
         <div><strong>Payment Method:</strong> VISA DEBIT •••• 3021</div>
         <div><strong>Billed To:</strong> Rossi Saloon Inc</div>
         <div><strong>Email:</strong> rossisaloon@gmail.com</div>
-        <div><strong>Phone:</strong> +1 (718) 300‑5196</div>
+        <div><strong>Phone:</strong> +1 (718) 300-5196</div>
     </div>
 
     <table class="table">
@@ -45,15 +95,32 @@ box-shadow:0 2px 10px rgba(0,0,0,0.1);}
     </table>
 
     <div class="qr">
-        <p><strong>Verify Invoice</strong></p>
-        <img src="cid:invoiceqr" width="140">
-        <div style="font-size:12px; color:#555;">Scan to confirm authenticity</div>
+        <p><strong>Verify Invoice:</strong></p>
+        
+        <!-- QR CODE -->
+        <img src="Invoice_Verification_QR_NEW.png" width="140">
+
+        <p style="margin-top:10px; font-size:12px; color:#555;">
+            Official Verification URL:<br>
+            <a href="https://books-advance-esthetic-us.github.io/zemits-invoice-verification/" target="_blank">
+                https://books-advance-esthetic-us.github.io/zemits-invoice-verification/
+            </a>
+        </p>
+
+        <p style="margin-top:10px;"><strong>Invoice Barcode:</strong></p>
+        <img src="https://api.qrserver.com/v1/barcode/?data=INV-079486&type=code128" width="240">
+
+        <div style="font-size:12px; color:#555; margin-top:5px;">
+            Scan to confirm authenticity
+        </div>
     </div>
 
     <div class="footer">
-        Thank you for your payment. This receipt confirms your purchase.<br>
-        Advance‑Esthetic • Invoice Verification ID: a94f3d7c-019d-4f91-b0bf-d9127aa28c72
+        Advance-Esthetic • Secure Verified Receipt<br>
+        Verification ID: <b>a94f3d7c-019d-4f91-b0bf-d9127aa28c72</b>
     </div>
+
 </div>
+
 </body>
 </html>
