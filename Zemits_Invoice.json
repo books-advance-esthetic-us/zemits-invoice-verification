@@ -1,6 +1,6 @@
 {
     "invoice_id": "INV-079486",
-    "status": "PAID",
+    "status": "PAID & VERIFIED",
     "payment_method": "VISA DEBIT ****3021",
     "invoice_date": "2025-10-13",
     "paid_date": "2025-10-13",
@@ -12,17 +12,13 @@
         "address": "221 Ward Ave, Staten Island, NY 10304, USA"
     },
     "items": [
-        {
-            "name": "Zemits DermeLuxx Pro",
-            "amount": 4190.0
-        },
-        {
-            "name": "Zemits Abigon Pro Ultimate Body Remodeling Slimming System",
-            "amount": 3790.0
-        }
+        { "name": "Zemits DermeLuxx Pro", "amount": 4190.00 },
+        { "name": "Zemits Abigon Pro Ultimate Body Remodeling Slimming System", "amount": 3790.00 }
     ],
-    "subtotal": 7980.0,
+    "subtotal": 7980.00,
     "tax": 708.23,
     "verification_id": "a94f3d7c-019d-4f91-b0bf-d9127aa28c72",
-    "verification_url": "https://verify.advance-esthetic.us/invoice/INV-079486"
+    "verification_url": "https://books-advance-esthetic-us.github.io/zemits-invoice-verification/",
+    "qr_code": "Invoice_Verification_QR_NEW.png",
+    "barcode": "https://api.qrserver.com/v1/barcode/?data=INV-079486&type=code128"
 }
