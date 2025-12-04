@@ -2,28 +2,32 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Invoice Receipt – Rossi Saloon Inc</title>
+<title>Payment Receipt – INV-079486</title>
 
 <style>
 body {
     font-family: Arial, sans-serif;
     background:#f5f5f5;
     padding:20px;
+    margin:0;
 }
+
 .container {
     max-width:600px;
     margin:auto;
     background:#ffffff;
     padding:25px;
-    border-radius:8px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    border-radius:10px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.1);
 }
+
 .header {
     text-align:center;
-    font-size:22px;
+    font-size:20px;
     font-weight:bold;
-    color:#1a1a1a;
+    color:#222;
 }
+
 .sub {
     text-align:center;
     color:#28a745;
@@ -31,54 +35,63 @@ body {
     margin-top:5px;
     font-weight:bold;
 }
+
 .details {
     margin-top:25px;
     font-size:14px;
-    line-height:1.55;
+    line-height:1.5;
 }
+
 .details div {
     margin-bottom:8px;
 }
+
 .table {
     width:100%;
     border-collapse:collapse;
     margin-top:20px;
 }
-.table th, .table td {
-    padding:10px;
-    border-bottom:1px solid #ddd;
-}
+
 .table th {
     background:#f2f2f2;
+    padding:10px;
     text-align:left;
     font-size:14px;
 }
+
+.table td {
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    font-size:14px;
+}
+
 .total {
-    font-weight:bold;
-    font-size:16px;
     text-align:right;
     padding-top:15px;
+    font-size:16px;
+    font-weight:bold;
 }
+
 .qr {
     text-align:center;
     margin-top:25px;
 }
+
 .footer {
     font-size:12px;
     color:#777;
     margin-top:25px;
     text-align:center;
-    line-height:1.5;
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
 
     <div class="header">Advance-Esthetic</div>
-    <div class="sub">PAYMENT RECEIPT — PAID & VERIFIED</div>
+    <div class="sub">PAYMENT RECEIPT – PAID</div>
 
     <div class="details">
         <div><strong>Invoice Number:</strong> INV-079486</div>
@@ -91,39 +104,49 @@ body {
     </div>
 
     <table class="table">
-        <tr><th>Description</th><th>Amount</th></tr>
+        <tr>
+            <th>Description</th>
+            <th>Amount</th>
+        </tr>
 
-        <tr><td>Zemits DermeLuxx Pro</td><td>$4,190.00</td></tr>
-        <tr><td>Zemits Abigon Pro Ultimate Body Remodeling Slimming System</td><td>$3,790.00</td></tr>
+        <tr>
+            <td>Zemits DermeLuxx Pro</td>
+            <td>$4,190.00</td>
+        </tr>
 
-        <tr><td><strong>Subtotal</strong></td><td>$7,980.00</td></tr>
-        <tr><td><strong>Tax (NY 8.875%)</strong></td><td>$708.23</td></tr>
+        <tr>
+            <td>Zemits Abigon Pro Ultimate Body Remodeling Slimming System</td>
+            <td>$3,790.00</td>
+        </tr>
 
-        <tr><td><strong>Total Paid</strong></td><td><strong>$8,688.23</strong></td></tr>
+        <tr>
+            <td><strong>Subtotal</strong></td>
+            <td>$7,980.00</td>
+        </tr>
+
+        <tr>
+            <td><strong>Tax (NY 8.875%)</strong></td>
+            <td>$708.23</td>
+        </tr>
+
+        <tr>
+            <td><strong>Total Paid</strong></td>
+            <td><strong>$8,688.23</strong></td>
+        </tr>
     </table>
 
     <div class="qr">
         <p><strong>Verify Invoice</strong></p>
 
-        <!-- ALWAYS USE NEW QR CODE -->
-        <img src="Invoice_Verification_Invoice_Verification_QR_NEW.png" width="150">
+        <!-- CID for email systems OR direct PNG for web -->
+        <img src="Invoice_Verification_QR_NEW.png" width="150" alt="QR Code">
 
-        <div style="font-size:12px; color:#555; margin-top:5px;">
-            Scan to confirm authenticity
-        </div>
-
-        <p style="margin-top:10px; font-size:13px;">
-            Verification URL:<br>
-            <a href="https://books-advance-esthetic-us.github.io/zemits-invoice-verification/" target="_blank">
-                https://books-advance-esthetic-us.github.io/zemits-invoice-verification/
-            </a>
-        </p>
+        <div style="font-size:12px; color:#555; margin-top:5px;">Scan to confirm authenticity</div>
     </div>
 
     <div class="footer">
-        This email serves as your official payment receipt.<br>
-        <strong>Verification ID:</strong> a94f3d7c-019d-4f91-b0bf-d9127aa28c72<br>
-        Advance-Esthetic • Thank you for your business.
+        Invoice Verification ID: a94f3d7c-019d-4f91-b0bf-d9127aa28c72<br>
+        Thank you for your payment.
     </div>
 
 </div>
