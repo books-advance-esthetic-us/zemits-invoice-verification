@@ -2,209 +2,103 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Invoice INV-079486 – Paid & Verified</title>
+<title>Invoice Verification – Advance-Esthetic</title>
 
 <style>
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f7fb;
+    background:#f4f7fb;
+    margin:0;
+    padding:0;
 }
 
 .header {
-    background: linear-gradient(to right, #3070ff, #4a8bff);
-    padding: 35px 20px;
-    text-align: center;
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
+    background:#3070ff;
+    text-align:center;
+    padding:30px;
+    color:white;
+    font-size:26px;
+    font-weight:bold;
 }
 
-.invoice-summary {
-    background: #fff;
-    max-width: 1000px;
-    margin: -40px auto 0;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.box {
+    background:white;
+    max-width:600px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.amount {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 6px;
-}
+h2 { margin-top:0; }
 
-.paid-status {
-    color: green;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.top-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.section {
-    background: white;
-    max-width: 1000px;
-    margin: 25px auto;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
-}
-
-h3 {
-    margin-top: 0;
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-.table th {
-    background: #f2f2f2;
-    padding: 12px;
-    text-align: left;
-    font-size: 14px;
-}
-
-.table td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
-}
-
-.right {
-    text-align: right;
-}
-
-.qr-wrapper {
-    text-align: center;
-    margin-top: 25px;
+input {
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin-top:10px;
+    font-size:16px;
 }
 
 .btn {
-    padding: 10px 14px;
-    border-radius: 6px;
-    border: 1px solid #4a8bff;
-    background: white;
-    color: #4a8bff;
-    cursor: pointer;
-    margin-left: 8px;
-    font-size: 14px;
-    text-decoration: none;
+    margin-top:15px;
+    padding:12px;
+    font-size:16px;
+    width:100%;
+    border-radius:8px;
+    border:none;
+    background:#3070ff;
+    color:white;
+    cursor:pointer;
 }
 
-.btn:hover {
-    background: #4a8bff;
-    color: white;
+.btn:hover { background:#1f5fe0; }
+
+.link-example {
+    margin-top:20px;
+    font-size:14px;
+    color:#555;
 }
+
+a { color:#3070ff; }
 </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<div class="header">
-    Advance-Esthetic
-</div>
+<div class="header">Advance-Esthetic Invoice Verification Portal</div>
 
-<!-- SUMMARY BOX -->
-<div class="invoice-summary">
+<div class="box">
+    <h2>Verify Your Invoice</h2>
+    <p>Enter your Invoice Number or Verification ID below:</p>
 
-    <div class="amount">$8,688.23</div>
-    <div class="paid-status">PAID • VERIFIED</div>
+    <input id="lookupInput" type="text" placeholder="Example: INV-079486">
 
-    <div class="top-row">
-        <div>
-            <div><b>Invoice #:</b> INV-079486</div>
-            <div><b>Invoice Date:</b> 10/13/2025</div>
-            <div><b>Paid Date:</b> 10/13/2025</div>
-        </div>
+    <button class="btn" onclick="lookupInvoice()">Verify Invoice</button>
 
-        <div class="right">
-            <button class="btn" onclick="window.print()">🖨 Print</button>
-            <a class="btn" href="Zemits_Invoice_HIGHRES_Print.pdf" target="_blank">⬇ Download PDF</a>
-        </div>
+    <div class="link-example">
+        Example Verified Invoice:  
+        <a href="invoice_INV-079486.html">INV-079486</a>
     </div>
-
 </div>
 
-<!-- BILLING INFO -->
-<div class="section">
-    <h3>Bill To</h3>
+<script>
+function lookupInvoice() {
+    let v = document.getElementById("lookupInput").value.trim();
 
-    <p><b>Rossi Saloon Inc</b><br>
-       rossisaloon@gmail.com<br>
-       +1 (718) 300-5196<br>
-       221 Ward Ave, Staten Island, NY 10304, USA
-    </p>
-</div>
+    if (!v) {
+        alert("Please enter an Invoice Number.");
+        return;
+    }
 
-<!-- ITEM TABLE -->
-<div class="section">
-    <h3>Item Details</h3>
+    // Standardize
+    v = v.toUpperCase();
 
-    <table class="table">
-        <tr>
-            <th>Description</th>
-            <th class="right">Amount</th>
-        </tr>
-
-        <tr>
-            <td>Zemits DermeLuxx Pro</td>
-            <td class="right">$4,190.00</td>
-        </tr>
-
-        <tr>
-            <td>Zemits Abigon Pro Ultimate Body Remodeling Slimming System</td>
-            <td class="right">$3,790.00</td>
-        </tr>
-
-        <tr>
-            <td><b>Subtotal</b></td>
-            <td class="right">$7,980.00</td>
-        </tr>
-
-        <tr>
-            <td><b>Tax (8.875%)</b></td>
-            <td class="right">$708.23</td>
-        </tr>
-
-        <tr>
-            <td><b>Total Paid</b></td>
-            <td class="right"><b>$8,688.23</b></td>
-        </tr>
-    </table>
-</div>
-
-<!-- VERIFICATION SECTION -->
-<div class="section">
-    <h3>Verification</h3>
-
-    <p><b>Status:</b> PAID & VERIFIED</p>
-
-    <p><b>Verification ID:</b> a94f3d7c-019d-4f91-b0bf-d9127aa28c72</p>
-
-    <p><b>Official Verification URL:</b><br>
-        <a href="https://books-advance-esthetic-us.github.io/zemits-invoice-verification/" target="_blank">
-            https://books-advance-esthetic-us.github.io/zemits-invoice-verification/
-        </a>
-    </p>
-
-    <!-- FINAL FIXED QR -->
-    <div class="qr-wrapper">
-        <p><b>QR Code (Verification):</b></p>
-        <img src="Invoice_Verification_QR_NEW.png" width="180">
-    </div>
-
-</div>
+    // Redirect format
+    window.location.href = "invoice_" + v + ".html";
+}
+</script>
 
 </body>
 </html>
