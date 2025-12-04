@@ -1,0 +1,28 @@
+{
+    "invoice": "INV-079486",
+    "status": "PAID",
+    "verified": true,
+    "client": {
+        "name": "Rossi Saloon Inc",
+        "email": "rossisaloon@gmail.com",
+        "phone": "+1 (718) 300-5196",
+        "address": "221 Ward Ave, Staten Island, NY 10304, USA"
+    },
+    "items": [
+        { "name": "Zemits DermeLuxx Pro", "amount": 4190.00 },
+        { "name": "Zemits Abigon Pro Ultimate Body Remodeling Slimming System", "amount": 3790.00 }
+    ],
+    "subtotal": 7980.00,
+    "tax": 708.23,
+    "total": 8688.23,
+    "payment_method": "VISA DEBIT •••• 3021",
+    "invoice_date": "2025-10-13",
+    "paid_date": "2025-10-13",
+    "salesperson": {
+        "name": "Mariana Lopez",
+        "verified": true
+    },
+    "verification_id": "a94f3d7c-019d-4f91-b0bf-d9127aa28c72",
+    "verification_url": "https://books-advance-esthetic-us.github.io/zemits-invoice-verification/invoice_INV-079486.html",
+    "qr": "Invoice_Verification_QR_NEW.png"
+}

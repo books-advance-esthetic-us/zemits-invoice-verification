@@ -50,7 +50,7 @@ button:hover { background:#1d5bf3; }
     <h2>Verify Your Invoice</h2>
     <p>Enter your invoice number exactly as shown on your receipt.</p>
 
-    <div class="example">(Example format: <b>INV-000000</b>)</div>
+    <div class="example">(Format: <b>INV-000000</b>)</div>
 
     <input id="inv" placeholder="Enter Invoice Number">
     <button onclick="go()">Verify Invoice</button>
@@ -60,12 +60,12 @@ button:hover { background:#1d5bf3; }
 function go() {
     let inv = document.getElementById('inv').value.trim().toUpperCase();
 
-    if (!inv.startsWith("INV-")) {
-        alert("Invalid invoice format. Use format: INV-000000");
+    if (!inv.match(/^INV-\d+$/)) {
+        alert("Invalid format. Use format: INV-000000");
         return;
     }
 
-    // Check if JSON exists
+    // Check JSON exists
     fetch(`data/${inv}.json`)
         .then(r => {
             if (r.ok) {
