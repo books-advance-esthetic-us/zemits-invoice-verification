@@ -3,136 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advance-Esthetic Invoice Verification – INV-079486</title>
+<title>Invoice INV-079486 – Paid & Verified</title>
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    background: #f3f5f7;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
 }
+
 .header {
-    background: #ffffff;
-    padding: 25px;
+    background: linear-gradient(to right, #3070ff, #4a8bff);
+    padding: 35px 20px;
     text-align: center;
-    font-size: 24px;
+    color: white;
+    font-size: 26px;
     font-weight: bold;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
-.container {
-    max-width: 850px;
+
+.invoice-summary {
     background: #fff;
-    margin: 30px auto;
-    padding: 25px;
+    max-width: 1000px;
+    margin: -40px auto 0;
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.status {
+
+.amount {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.paid-status {
     color: green;
     font-weight: bold;
-    font-size: 20px;
-}
-.section-title {
     font-size: 18px;
-    font-weight: bold;
-    margin-top: 25px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 8px;
+    margin-top: 6px;
 }
-.row {
-    margin: 8px 0;
-    font-size: 15px;
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
-.items-table {
+
+.section {
+    background: white;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
 }
-.items-table th {
-    background: #e9e9e9;
-    padding: 10px;
-}
-.items-table td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-.qr-box {
-    text-align: center;
-    margin-top: 25px;
-}
-.qr-box img {
-    width: 160px;
-}
-.btn {
-    display: inline-block;
-    padding: 12px 18px;
-    border-radius: 6px;
-    background: #0077cc;
-    color: #fff;
-    margin: 10px 5px;
-    text-decoration: none;
+
+.table th {
+    background: #f2f2f2;
+    padding: 12px;
+    text-align: left;
     font-size: 14px;
 }
-.footer {
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.right {
+    text-align: right;
+}
+
+.badge-paid {
+    background: #28a745;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.qr-wrapper {
     text-align: center;
     margin-top: 25px;
-    color: #777;
-    font-size: 13px;
 }
+
+.btn-row {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #4a8bff;
+    background: white;
+    color: #4a8bff;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
 </style>
 </head>
-
 <body>
 
-<div class="header">Advance-Esthetic – Invoice Verification</div>
+<div class="header">
+    Advance-Esthetic
+</div>
 
-<div class="container">
+<div class="invoice-summary">
 
-    <div class="status">✓ Verified – PAID</div>
+    <div class="amount">$8,688.23</div>
+    <div class="paid-status">PAID • VERIFIED</div>
 
-    <div class="section-title">Invoice Overview</div>
-    <div class="row"><b>Invoice #:</b> INV-079486</div>
-    <div class="row"><b>Invoice Date:</b> 10/13/2025</div>
-    <div class="row"><b>Paid Date:</b> 10/13/2025</div>
-    <div class="row"><b>Payment Method:</b> VISA DEBIT •••• 3021</div>
-    <div class="row"><b>Verification ID:</b> a94f3d7c-019d-4f91-b0bf-d9127aa28c72</div>
+    <div class="top-row">
+        <div>
+            <div><b>Invoice #:</b> INV-079486</div>
+            <div><b>Invoice Date:</b> 10/13/2025</div>
+            <div><b>Paid Date:</b> 10/13/2025</div>
+        </div>
 
-    <div class="section-title">Client Information</div>
-    <div class="row"><b>Name:</b> Rossi Saloon Inc</div>
-    <div class="row"><b>Email:</b> rossisaloon@gmail.com</div>
-    <div class="row"><b>Phone:</b> +1 (718) 300-5196</div>
-    <div class="row"><b>Address:</b> 221 Ward Ave, Staten Island, NY 10304, USA</div>
+        <div class="right">
+            <button class="btn" onclick="window.print()">🖨 Print</button>
+            <a class="btn" href="Zemits_Invoice_HIGHRES_Print.pdf">⬇ Download PDF</a>
+        </div>
+    </div>
 
-    <div class="section-title">Purchased Items</div>
+</div>
 
-    <table class="items-table">
-        <tr><th>Description</th><th>Amount</th></tr>
-        <tr><td>Zemits DermeLuxx Pro</td><td>$4,190.00</td></tr>
-        <tr><td>Zemits Abigon Pro Ultimate Body Remodeling Slimming System</td><td>$3,790.00</td></tr>
-        <tr><td><b>Subtotal</b></td><td>$7,980.00</td></tr>
-        <tr><td><b>Tax (8.875%)</b></td><td>$708.23</td></tr>
-        <tr><td><b>Total Paid</b></td><td><b>$8,688.23</b></td></tr>
+<div class="section">
+    <h3>Bill To</h3>
+    <p><b>Rossi Saloon Inc</b><br>
+       rossisaloon@gmail.com<br>
+       +1 (718) 300-5196<br>
+       221 Ward Ave, Staten Island, NY 10304, USA
+    </p>
+</div>
+
+<div class="section">
+    <h3>Item Details</h3>
+
+    <table class="table">
+        <tr>
+            <th>Description</th>
+            <th class="right">Amount</th>
+        </tr>
+        <tr>
+            <td>Zemits DermeLuxx Pro</td>
+            <td class="right">$4,190.00</td>
+        </tr>
+
+        <tr>
+            <td>Zemits Abigon Pro Ultimate Body Remodeling Slimming System</td>
+            <td class="right">$3,790.00</td>
+        </tr>
+
+        <tr>
+            <td><b>Subtotal</b></td>
+            <td class="right">$7,980.00</td>
+        </tr>
+        <tr>
+            <td><b>Tax (8.875%)</b></td>
+            <td class="right">$708.23</td>
+        </tr>
+        <tr>
+            <td><b>Total Paid</b></td>
+            <td class="right"><b>$8,688.23</b></td>
+        </tr>
     </table>
+</div>
 
-    <div class="qr-box">
-        <p><b>Scan to Verify</b></p>
-        <img src="Invoice_Verification_QR_NEW.png" alt="QR Code">
-        <div style="font-size:13px; color:#666;">This invoice is officially verified.</div>
-    </div>
+<div class="section">
+    <h3>Verification</h3>
 
-    <div style="text-align:center; margin-top:20px;">
-        <a class="btn" href="Zemits_InvoicePortalViewer.html">Full Portal Viewer</a>
-        <a class="btn" href="Zemits_EMAIL_InvoiceReceipt_RossiSalon.html">Email Receipt</a>
-        <a class="btn" href="Zemits_MobileReceipt.html">Mobile Receipt</a>
-        <a class="btn" href="Zemits_Invoice_HIGHRES_Print.pdf">High-Res PDF</a>
-        <a class="btn" href="Zemits_Invoice.json">JSON Verification Data</a>
-        <a class="btn" href="Zemits_ThermalReceipt.pdf">Thermal Receipt</a>
-    </div>
+    <p><b>Status:</b> PAID & VERIFIED</p>
 
-    <div class="footer">
-        Verified by Advance-Esthetic<br>
-        Secure Digital Invoice Validation Portal
+    <p><b>Verification ID:</b> a94f3d7c-019d-4f91-b0bf-d9127aa28c72</p>
+
+    <p>
+        <b>Verification URL:</b><br>
+        <a href="https://verify.advance-esthetic.us/invoice/INV-079486" target="_blank">
+            https://verify.advance-esthetic.us/invoice/INV-079486
+        </a>
+    </p>
+
+    <p><b>Invoice Barcode:</b></p>
+    <img src="https://api.qrserver.com/v1/barcode/?data=INV-079486&type=code128" width="260">
+
+    <div class="qr-wrapper">
+        <p><b>QR Code (Verification):</b></p>
+        <img src="Invoice_Verification_QR_NEW.png" width="180">
     </div>
 
 </div>
